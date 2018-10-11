@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>SOPORTE</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+</head>
+<body>
+    <section class="container">
+        <div class="cabecera" id ="cabecera_id"> 
+            <h1> SOPORTE TECNICO</h1>
+        </div>
+
+        <div class="menuizquierdo">
+            <figure class="logotipo"> <!-- logotipo -->
+                <img class="imgagenfondo" src="servicio_tecnico.png" srcset="servicio_tecnico.png 1x, invie2x.png 2x" width="186" height="186" alt="Invie logotipo" margin=0%/>
+            </figure>
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a id="menu1">STOCK </a>
+                    </li>
+                    <li>
+                        <a id="menu2">ALTAS DE STOCK</a>
+                    </li>
+                    <li>
+                        <a id="menu3">SALIDA DE STOCK</a>
+                    </li>
+                    <li>
+                        <a id="menu4">VISITAS AL DATA CENTER</a>
+                    </li>
+                    <li>
+                        <a id="menu5">REPORTES</a>
+                    </li>
+
+                </ul>
+                
+            </nav>
+        
+        </div>
+
+        <div class="contenido" id="contenido_id">
+            <figure class="post-image">
+                <img src="contenedor.jpg" alt="">
+            </figure>
+
+            <div class="BotonesRegistro" id="BotonesRegistros_id">
+                    <input type="button" value="Nuevo" class="btnnuevo btn" id="btnnuevo_id"/>
+                    <input type="button" value="Actualizar" class="btnactualizar btn" id="btnactualizar_id"/>
+                    <input type="button" value="Guardar" class="btnguardar btn" id="btnguardar_id"/>
+                    <input type="button" value="Eliminar" class="btneliminar btn" id="btneliminar_id"/>
+                    <input type="button" value="Salir" class="btnsalir btn" id="btnsalir_id"/>
+            </div>
+            <div class="BotonesReporte" id="BotonesReporte_id">
+                    <input type="button" value="Imprimir" class="btnImprimir btn" id="btnImprimir_id"/>
+                    <input type="button" value="Vista" class="btnVista btn" id="btnVista_id"/>
+                    <input type="button" value="Salir" class="btnSalirreporte btn" id="btnSalirreporte_id"/>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </section>
+
+</body>
+
+<script>
+    var accion1=document.getElementById("menu1");
+    var accion2=document.getElementById("menu2");
+    var accion3=document.getElementById("menu3");
+    var accion4=document.getElementById("menu4");
+    var accion5=document.getElementById("menu5");
+    var botonvisible=document.getElementById("BotonesRegistros_id")
+
+    accion1.addEventListener('click',function(){
+        
+        botonvisible.classList.add("habilitarbotonesregistro")
+    })
+    accion2.addEventListener('click',function(){
+        
+        botonvisible.classList.add("habilitarbotonesregistro")
+    })
+    accion3.addEventListener('click',function(){
+        
+        botonvisible.classList.add("habilitarbotonesregistro")
+    })
+    accion4.addEventListener('click',function(){
+        
+        botonvisible.classList.add("habilitarbotonesregistro")
+    })
+    
+    accion5.addEventListener('click',function(){
+        
+        botonvisible.classList.add("deshabilitarbotonesregistro")
+    })
+</script>
+
