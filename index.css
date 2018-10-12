@@ -163,14 +163,16 @@ body{
     margin-left: 48%;
 }
 
-.habilitarbotonesregistro{
+.habilitarbotones{
     display: inline-block;
     bottom: 12%;
 }
-.deshabilitarbotonesregistro{
+.deshabilitarbotones{
     display: none;
     bottom: 12%;
 }
+
+
 
 /*
 .imgagenfondo:hover{

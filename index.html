@@ -72,27 +72,51 @@
     var accion4=document.getElementById("menu4");
     var accion5=document.getElementById("menu5");
     var botonvisible=document.getElementById("BotonesRegistros_id")
+    var botonrporte=document.getElementById("BotonesReporte_id")
 
     accion1.addEventListener('click',function(){
+        //debugger
         
-        botonvisible.classList.add("habilitarbotonesregistro")
+        if (botonvisible.classList.contains("deshabilitarbotones")){
+            botonvisible.classList.remove("deshabilitarbotones")
+        }
+        botonrporte.classList.remove("habilitarbotones")
+        botonvisible.classList.add("habilitarbotones")
     })
+    
     accion2.addEventListener('click',function(){
         
-        botonvisible.classList.add("habilitarbotonesregistro")
+        if (botonvisible.classList.contains("deshabilitarbotones")){
+            botonvisible.classList.remove("deshabilitarbotones")
+        }
+        botonrporte.classList.remove("habilitarbotones")
+        botonvisible.classList.add("habilitarbotones")
     })
     accion3.addEventListener('click',function(){
         
-        botonvisible.classList.add("habilitarbotonesregistro")
+        if (botonvisible.classList.contains("deshabilitarbotones")){
+            botonvisible.classList.remove("deshabilitarbotones")
+        }
+        botonrporte.classList.remove("habilitarbotones")
+        botonvisible.classList.add("habilitarbotones")
     })
     accion4.addEventListener('click',function(){
         
-        botonvisible.classList.add("habilitarbotonesregistro")
+        if (botonvisible.classList.contains("deshabilitarbotones")){
+            botonvisible.classList.remove("deshabilitarbotones")
+        }
+        botonrporte.classList.remove("habilitarbotones")
+        botonvisible.classList.add("habilitarbotones")
     })
     
     accion5.addEventListener('click',function(){
+    
+        if (botonrporte.classList.contains("deshabilitarbotones")){
+            botonrporte.classList.remove("deshabilitarbotones")
+        }
+        botonvisible.classList.add("deshabilitarbotones")
+        botonrporte.classList.add("habilitarbotones")
         
-        botonvisible.classList.add("deshabilitarbotonesregistro")
     })
 </script>
 
