@@ -42,7 +42,11 @@ body{
     position: relative;
     display: block;
     height: auto;
+    
     left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
 
 }
 .logotipo{
@@ -107,19 +111,22 @@ body{
 .menu li:hover{
     /*color: rgba(165, 68, 96, 1);*/
     transform: scale(1.1);
-    border-bottom: 0.1px;
+    background: -webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#000300), to(#153D53));
     border:0.2px solid white ;
+    /*border-bottom: 0.2px;*/
     border-radius:5%;
-    box-shadow: 0px 0px 2px 2px #ec731e;
+    
+    /*box-shadow: 0px 0px 2px 2px #ec731e;*/
 }
 .BotonesRegistro,.BotonesReporte{
     display: none;
     margin: 0;
     border: 0;
     padding: 0;
-    position:fixed;
-    width: 82.5%;
-    height: 5%;
+    position: absolute;
+    width: 992px;
+    left: 15%;
+    height: 7%;
 }
 .BotonesReporte{
     bottom: 24%;
@@ -134,45 +141,44 @@ body{
     cursor: pointer;
     text-decoration: none;
     font-size: 18px;
-    background: #fd324e;
-    background: linear-gradient(to left, #fe344e, #ff7250);
-    position:fixed;
+    /*background:-webkit-gradient(linear, 85% 44%, 10% 21%, from(#2F2365), to(#9C4E19));*/
+    background:-webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#000300), to(#153D53));
+    position: absolute;
+    display: inline-block;
     width: 150px;
-    height: 5%;
+    height: 100%;
+    
 }
 .btn:hover{
     filter: opacity(.5);
     transform: scale(1.1);
 }
 
-
 .btnnuevo,.btnImprimir{
     margin-left: 1%;
     
 }
+
 .btnactualizar, .btnVista{
-    margin-left: 12%;
+    margin-left: 20%;
 }
 .btnguardar,.btnSalirreporte{
-    margin-left: 24%;
+    margin-left: 38%;
 }
 .btneliminar{
-    margin-left: 36%;
+    margin-left: 56%;
 }
 .btnsalir{
-    margin-left: 48%;
+    margin-left: 74%;
 }
-
 .habilitarbotones{
     display: inline-block;
-    bottom: 12%;
+    bottom: 1%;
 }
 .deshabilitarbotones{
     display: none;
     bottom: 12%;
 }
-
-
 
 /*
 .imgagenfondo:hover{
