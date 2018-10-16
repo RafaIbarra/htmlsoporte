@@ -180,12 +180,44 @@ body{
     bottom: 12%;
 }
 
-/*
-.imgagenfondo:hover{
-    filter: opacity(.5);
-    filter: blur(2px);    
+.tabla {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 11px;
+    top: 50px;
 }
-.imgagenfondo{
-    position: fixed;
+.tablastock{
+    display:none;
+    width: 900px;
+    left: 15%;
+}
+.tablavisita{
+    display:none;
+    left: 10%;
+    width: 1050px;
+}
+.tabla, td, th {
+    border: 1px solid #273b47;
 
-}*/
+  }
+th ,td{
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+}
+.Titulotabla{
+    text-align: center;
+    background-color:transparent;
+    
+}
+
+.habilitartabla{
+    display: block;
+    
+}
+.deshabilitartabla{
+    display: none;
+    
+}

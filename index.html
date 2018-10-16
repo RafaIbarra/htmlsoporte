@@ -9,7 +9,7 @@
 <body>
     <section class="container">
         <div class="cabecera" id ="cabecera_id"> 
-            <h1> SOPORTE TECNICO - COOPERATIVA</h1>
+            <h1> SOPORTE TECNICO</h1>
         </div>
 
         <div class="menuizquierdo">
@@ -43,10 +43,6 @@
 
         <div class="contenido" id="contenido_id">
             
-            <figure class="post-image">
-                <img src="fondo2.jpg" alt="">
-            </figure>
-            
             <div class="BotonesRegistro" id="BotonesRegistros_id">
                     <input type="button" value="Nuevo" class="btnnuevo btn" id="btnnuevo_id"/>
                     <input type="button" value="Actualizar" class="btnactualizar btn" id="btnactualizar_id"/>
@@ -59,6 +55,121 @@
                     <input type="button" value="Vista" class="btnVista btn" id="btnVista_id"/>
                     <input type="button" value="Salir" class="btnSalirreporte btn" id="btnSalirreporte_id"/>
             </div>
+            
+                <table class="tablastock tabla" id="tablastock_id">
+                    <thead class="tablacabecera">
+                        <tr > 
+                            <th class='Titulotabla'  colspan=7> DATOS DE STOCK</th>    
+                        </tr>
+                        <tr> 
+                            <th>CODIGO</th>
+                            <th>DESCRIPCION</th>
+                            <th>CANT EN STOCK</th>
+                            <th>CANT DISPONIBLE</th>
+                            <th>FECHA REGISTRO</th>
+                            <th>USUARIO</th>
+                            <th>TIEMPO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="tablavisita tabla" id="tablavisita_id">
+                        <thead class="tablacabecera">
+                            <tr > 
+                                <th class='Titulotabla'  colspan=10> DATOS DE VISITAS</th>    
+                            </tr>
+                            <tr> 
+                                <th>CODIGO</th>
+                                <th>ENCARCADO</th>
+                                <th>ENTRADA</th>
+                                <th>SALIDA</th>
+                                <th>REPRESENTANTE</th>
+                                <th>EMPRESA</th>
+                                <th>MOTIVO</th>
+                                <th>OBSERVACION</th>
+                                <th>TIEMPO</th>
+                                <th>USUARIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                        </tbody>
+                </table>
+            
+            <figure class="post-image">
+                <img src="fondo2.jpg" alt="">
+            </figure>
+
         </div>
 
         <div class="footer"></div>
@@ -72,8 +183,13 @@
     var accion3=document.getElementById("menu3");
     var accion4=document.getElementById("menu4");
     var accion5=document.getElementById("menu5");
+
     var botonvisible=document.getElementById("BotonesRegistros_id")
     var botonrporte=document.getElementById("BotonesReporte_id")
+
+    var tabla_stock=document.getElementById("tablastock_id")
+    var tabla_visita=document.getElementById("tablavisita_id")
+    
 
     accion1.addEventListener('click',function(){
         //debugger
@@ -83,6 +199,16 @@
         }
         botonrporte.classList.remove("habilitarbotones")
         botonvisible.classList.add("habilitarbotones")
+        
+        if (tabla_stock.classList.contains("deshabilitartabla")){
+            tabla_stock.classList.remove("deshabilitartabla")
+        }
+        
+        tabla_stock.classList.add("habilitartabla")
+        tabla_visita.classList.add("deshabilitartabla")
+
+
+
     })
     
     accion2.addEventListener('click',function(){
@@ -92,6 +218,10 @@
         }
         botonrporte.classList.remove("habilitarbotones")
         botonvisible.classList.add("habilitarbotones")
+
+        tabla_stock.classList.add("deshabilitartabla")
+        tabla_visita.classList.add("deshabilitartabla")
+
     })
     accion3.addEventListener('click',function(){
         
@@ -100,6 +230,9 @@
         }
         botonrporte.classList.remove("habilitarbotones")
         botonvisible.classList.add("habilitarbotones")
+
+        tabla_stock.classList.add("deshabilitartabla")
+        tabla_visita.classList.add("deshabilitartabla")
     })
     accion4.addEventListener('click',function(){
         
@@ -108,15 +241,28 @@
         }
         botonrporte.classList.remove("habilitarbotones")
         botonvisible.classList.add("habilitarbotones")
+
+
+        if (tabla_visita.classList.contains("deshabilitartabla")){
+            tabla_visita.classList.remove("deshabilitartabla")
+        }
+
+        tabla_visita.classList.add("habilitartabla")
+        tabla_stock.classList.add("deshabilitartabla")
+
     })
     
     accion5.addEventListener('click',function(){
-    
+        
         if (botonrporte.classList.contains("deshabilitarbotones")){
             botonrporte.classList.remove("deshabilitarbotones")
         }
         botonvisible.classList.add("deshabilitarbotones")
         botonrporte.classList.add("habilitarbotones")
+        
+        tabla_stock.classList.add("deshabilitartabla")
+        tabla_visita.classList.add("deshabilitartabla")
+        
         
     })
 </script>
