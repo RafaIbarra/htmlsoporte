@@ -187,6 +187,26 @@ body{
     position: absolute;
     font-size: 11px;
     top: 50px;
+    background:-webkit-gradient(linear, 85% 44%, 10% 21%, from(#2F2365), to(#9C4E19));
+    border-collapse: collapse;
+
+}
+.tabla, td, th {
+    border: 1px solid #273b47;
+    
+    
+}
+th ,td{
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+}
+.Titulotabla{
+    background:-webkit-gradient(linear, 85% 44%, 10% 21%, from(#2F2365), to(#9C4E19));
+    text-align: center; 
+}
+th{
+    background-color: snow;
 }
 .tablastock{
     display:none;
@@ -198,21 +218,6 @@ body{
     left: 10%;
     width: 1050px;
 }
-.tabla, td, th {
-    border: 1px solid #273b47;
-
-  }
-th ,td{
-    padding: 10px 20px;
-    width: 150px;
-    text-align: center;
-}
-.Titulotabla{
-    text-align: center;
-    background-color:transparent;
-    
-}
-
 .habilitartabla{
     display: block;
     
